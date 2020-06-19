@@ -1,0 +1,304 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{background-color: #2d3436;}
+/* the main container of the operations */
+#calculator{
+    width: 50%;
+    height: fit-content;
+    background-color: #747d8c;
+    margin: auto;
+    position: relative;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 10px;
+}
+/*all inputs*/
+input{
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    outline: none;
+    font-size: 20px;
+}
+/* to remove events from pointer */
+#form1-taken-percent,#form1-percent-left,#finale-price,#money-amount,#money-different{
+    pointer-events: none;
+}
+/* to edit the input titles (h3) */
+h3{
+    color: white;
+    display: inline-block;
+    margin-top:10px ;
+    margin-bottom: 10px;
+}
+/* editing paragraph */
+p{color: white;}
+/* editing paragraph in form 1 */
+#form1-p{margin:10px 0px 20px 280px;font-size: 20px; width: 100%;}
+/* form1 attributes */
+#form1{
+    border-bottom: 2px solid black;
+    direction: rtl;
+}
+/* animated underline as a span*/
+.underline{
+    display: block;
+    background-color: #e84118;
+    height: 3px;
+    width: 0;
+    transition: 500ms ;
+    pointer-events: none;
+}
+/* the selected spans (underline) on clicking at inputs will change the width to 100% in a transition */ 
+#form1-percent:focus ~ #span1,#form1-num1:focus ~ #span2,#form1-num2:focus ~ #span3 {
+    width: 100%;
+    transition: 300ms ;
+}
+/* the form1 button attributes */
+#btn-form1{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+}
+/* hovering on the form1 button */
+#btn-form1:hover{
+    background-color: #e84118;
+    transition: 300ms;
+}
+/* a button to reveal the way how the equation methode only for form1 */
+#form1-way-button{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+}
+/* hoverig on the way button */ 
+#form1-way-button:hover{
+    background-color: #e84118;
+    transition: 300ms; 
+}
+
+/* the form1 way */ 
+/*form1 how-to div start*/
+
+/* the how-to div that reveals from clicking the way button so (isclicked(way-button) === true(#form1-howto))*/
+.howto{
+    background-color: #fbc531;
+    width: 300px;
+    height:200px ;
+}
+#Form1-howto{
+    position: absolute;
+    top: 50px;
+    left: 35px;
+    padding: 10px;
+    opacity: 0%;
+}
+/* the paragraph inside the how to div */
+#Form1-howto p {
+    font-size: 20px;
+    direction: rtl;
+    font-size: 25px;
+}
+/* the title of way div */
+#Form1-howto h3,#Form2-howto h3,#Form3-howto h3{
+    color: #fff;
+    display: block;
+    float: right;
+    padding-left: 100%;
+    font-size: 40px;
+}
+/*the how-to div for revealing the equation methode*/
+#Form1-howto h4,#Form2-howto h4,#Form3-howto h4{
+    color: #fff;
+    display: block;
+    float: right;
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    background-color: white;
+    color: #000000;
+    font-size: 16px;
+    box-shadow: #00000073 2px 3px 3px;
+}
+/*form1 how-to div end*/
+/* form 1 end */ 
+
+/* form2 start */ 
+/* form2 attributes */
+#form2{
+    margin-top: 10px;
+    /* border-bottom: 2px solid black; */
+    direction: rtl;
+}
+/* input onclick underline animation */
+#form2-money:focus ~ #span6,#form2-money-percent:focus ~ #span7 {
+    width: 100%;
+    transition: 300ms ;
+}
+
+/* the form2 button attributes */
+#btn-form2{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+    margin-top: 25px;
+}
+/* hovering on the form2 button */
+#btn-form2:hover{
+    background-color: #e84118;
+    transition: 300ms;
+}
+/* the form2 way */
+/* a button to reveal the way how the equation methode only for form2 */
+#form2-way-button{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+}
+/* hoverig on the way button */ 
+#form2-way-button:hover{
+    background-color: #e84118;
+    transition: 300ms; 
+}
+/* the how-to div that reveals from clicking the way button so (isclicked(way-button) === true(#form1-howto))*/
+/* form2 how-to start */ 
+#Form2-howto{
+    position: absolute;
+    top: 580px;
+    left: 35px;
+    padding: 10px;
+    opacity: 0%;
+}
+/* the paragraph inside the how to div */
+#Form2-howto p {
+    font-size: 20px;
+    direction: rtl;
+    font-size: 25px;
+}
+
+/*form hown-to end*/
+/*the explaining paragraph above titles*/
+#form2-p{margin:25px 0px 20px 280px;font-size: 20px; width: 100%;}
+/* a border-bottom as a break line */
+#form2{border-bottom: 2px solid black;}
+
+/* form2 end*/
+
+/* form3 start */
+#form3{
+    direction: rtl;
+}
+#form3-p{margin:25px 0px 20px 280px;font-size: 20px; width: 100%;}
+
+#product-price:focus ~ #span8,#discount:focus ~ #span9 {
+    width: 100%;
+    transition: 300ms ;
+}
+/* the form1 button attributes */
+#btn-form3{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+    margin-top: 25px;
+}
+/* hovering on the form1 button */
+#btn-form3:hover{
+    background-color: #e84118;
+    transition: 300ms;
+}
+/* a button to reveal the way how the equation methode only for form1 */
+#form3-way-button{
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: 300ms;
+}
+/* hoverig on the way button */ 
+#form3-way-button:hover{
+    background-color: #e84118;
+    transition: 300ms; 
+}
+
+/* the form3 way */ 
+/*form1 how-to div start*/
+
+/* the how-to div that reveals from clicking the way button so (isclicked(way-button) === true(#form1-howto))*/
+.howto{
+    background-color: #fbc531;
+    width: 300px;
+    height:fit-content ;
+}
+#Form3-howto{
+    position: absolute;
+    top: 960px;
+    left: 35px;
+    padding: 10px;
+    opacity: 0%;
+}
+/* the paragraph inside the how to div */
+#Form3-howto p {
+    font-size: 20px;
+    direction: rtl;
+    font-size: 25px;
+}
+
+/*form3 how-to div end*/
+/* form 3 end */ 
+#designer{
+    width: 300px;
+    position: absolute;
+    top: 50px;
+    right: 35px;
+    padding: 10px;
+    background-color: #f5f6fa;
+    height: fit-content;
+}
+#avatar{
+    width: 100px;
+    border-radius: 100%;
+}
+#designer h3 {
+    color: black;
+    position: absolute;
+    top: 45px;
+    left: 120px;
+}
+#designer p{
+    color: black;
+    position: absolute;
+    top: 75px;
+    left: 120px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "percent_calculate",
+  "version": "1.0.0",
+  "description": "a site where you can calculate the percent with explaning how it works",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saif Alhaider",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

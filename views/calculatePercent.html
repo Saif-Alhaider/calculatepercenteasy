@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculatePercent.css">
+    <title>practise</title>
+</head>
+<body>
+    <div id="calculator">
+        <form id = "form1">
+            <p id="form1-p">اذا عندك مجموعة اشياء تساوي %100 واخذت منها قطعة او قطعتين شكد تصير النسبة</p>
+            <!-- 1 the first input is for the full percent like 100% ex: 7 apples = 100% i took 1 the lefgt percent now is 85%-->
+            <h3>النسبة المئوية الكلية</h3>
+            <input type="text" id="form1-percent" autocomplete="off"><br>
+            <span class="underline" id="span1"></span>
+
+            <!-- 2 the number of objects you have like the above ex the total number of apples you have-->
+            <h3>عدد القطع العندك</h3>
+            <input type="text" id="form1-num1" autocomplete="off"><br>
+            <span class="underline" id="span2"></span>
+            
+            <!-- 3 the number of taken objects the taken apples from the total-->
+            <h3>عدد القطع الاخذتهة</h3>
+            <input type="text" id="form1-num2" autocomplete="off"><br>
+            <span class="underline" id="span3"></span>
+            <!-- 4 the percent result of the taken objects-->
+            <h3>الناتج النسبي</h3>
+            <input type="text" id = "form1-taken-percent" autocomplete="off"><br>
+            <span class="underline" id="span4" ></span>
+            <!-- 5 the percent result of the left objects -->
+            <h3>النسبة المتبقية</h3>
+            <input type="text" id="form1-percent-left" autocomplete="off"><br>
+            <span class="underline" id="span5"></span><br>
+            <!-- the buttons -->
+            <!-- the submit button -->
+            <button id="btn-form1" type="button">submit</button>
+            <!-- the way button (reveals the equation methode) -->
+            <button id="form1-way-button" type="button">الطريقة؟</button>
+        </form>
+        <form id = "form2">
+            <p id="form2-p"> اذا عند فلوس وكلهة تساوي %100 وصديقك يريد منك كل يوم تدفع %3 شكد تدفع </p>
+            <!-- the amount of money you have -->
+            <h3>عدد الفلوس الكلي دينار او دولار او اي عملة</h3>
+            <input type="text" id="form2-money" autocomplete="off" required>
+            <span id="span6" class="underline"></span>
+            <!-- the amount percent of money you want to give each day -->
+            <h3> نسبة الفلوس الي حتطيهة بالمئة % </h3>
+            <input type="text" id="form2-money-percent" autocomplete="off" required>
+            <!-- the amount you give (result) -->
+            <span id="span7" class="underline"></span>
+            <h3>الناتج</h3>
+            <input type="text" autocomplete="off" id="money-amount">
+            <!-- the submit button -->
+            <button id="btn-form2" type="button">submit</button>
+            <!-- the way button (reveals the equation methode) -->
+            <button id="form2-way-button" type="button">الطريقة؟</button>
+        </form>
+        <form id = "form3" >
+            <p id="form3-p">لمعرفة خصم المنتجات</p>
+            <!-- the product price -->
+            <h3>سعر المنتج</h3>
+            <input type="text" id="product-price" autocomplete="off">
+            <span id="span8" class="underline"></span>
+            <!-- the discount  -->
+            <h3>الخصم</h3>
+            <input type="text" id="discount" autocomplete="off">
+            <span id="span9" class="underline"></span>
+            <!-- the finale price -->
+            <h3>السعر النهائي</h3>
+            <input type="text" id="finale-price" >
+            <!-- the submit button -->
+            <h3>فرق الفلوس</h3>
+            <input type="text" id="money-different">
+            <button id="btn-form3" type="button">submit</button>
+            <!-- the way button (reveals the equation methode) -->
+            <button id="form3-way-button" type="button">الطريقة؟</button>
+        </form>
+    </div>
+    <div id="the-ways">
+        <div id="Form1-howto" class="howto">
+            <h3>الطريقة </h3>
+            <p>نقوم بقسمة عدد القطع على القطع المأخوذة ونضربها في النسبة</p>
+            <h4>%عدد القطع / عدد القطع المأخوذة * النسبة </h4>
+        </div>
+        <div id="Form2-howto" class="howto">
+            <h3>الطريقة </h3>
+            <p>نقوم بضرب النسبة في 0.01 وفي العدد الكلي</p>
+            <h4> %العدد الكلي * 0.01 * النسبة</h4>
+        </div>
+        <div id="Form3-howto" class="howto">
+            <h3>الطريقة </h3>
+            <p>نقوم بطرح النسبة الكلية من الخصم ومن ثم نضرب الناتج في 0.01 وفي السعر</p>
+            <h4>for price 200$: 100% - 30% = 70% => 70% * 0.01 = 0.7 => 0.7 * 200$ = 140$ </h4>
+        </div>
+    </div>
+    <div id="designer">
+        <img src="./me.jpg" id="avatar">
+        <h3>Saif Alhaider</h3>
+        <p>The designer</p>
+    </div>
+    <script src="calculatePercent.js"></script>
+</body>
+</html>
